@@ -1,10 +1,9 @@
 import firebase from "./firebase"
-import { getDatabase,onValue,push, ref, remove, set, update  } from "firebase/database";
+import { getDatabase, onValue, push, ref, remove, set, update  } from "firebase/database";
 import {useState,useEffect} from "react"
 import Toastify from "./toastify"
 
 
-// Bilgi Ekleme
 export const AddUser=(info)=>{
     const db = getDatabase(firebase);
     const userRef=ref(db,"users/")
@@ -17,7 +16,6 @@ export const AddUser=(info)=>{
 
 }
 
-// Bilgi Çağırma
 
 export const useFetch=()=>{
      const [isLoading,setIsLoading]=useState();
